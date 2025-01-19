@@ -53,9 +53,12 @@
 
 他の全てのコマンドの前に送信する。ホストは、コマンドの成功を示す文字列が返ってきたことをもって接続の確立と判断する。
 
-- Arguments: none
-- Return value:
+### Arguments
 
-  |Value|Type|Description|
-  |:--:|:--:|:--|
-  |`"handyrpc_welcome"`|str|indicates connection established|
+none
+
+### Return value
+
+|Value|Type|Description|
+|:--:|:--:|:--|
+|`"handyrpc_welcome"`|str|indicates connection established|
