@@ -1,4 +1,4 @@
-# HandyRPC
+# HandyRPC (WIP)
 
 # Recommended Serial Setting
 
@@ -49,6 +49,18 @@
 
 # System Commands
 
+## device_name
+
+### Arguments
+
+none
+
+### Return Value
+
+|Type|Value|Description|
+|:--:|:--:|:--|
+|str|any|device name|
+
 ## handyrpc_hello
 
 他の全てのコマンドの前に送信する。ホストは、コマンドの成功を示す文字列が返ってきたことをもって接続の確立と判断する。
@@ -59,6 +71,6 @@ none
 
 ### Return value
 
-|Value|Type|Description|
+|Type|Value|Description|
 |:--:|:--:|:--|
-|`"handyrpc_welcome"`|str|indicates connection established|
+|str|`"handyrpc_welcome"`|indicates connection established|
