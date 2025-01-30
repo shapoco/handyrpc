@@ -40,12 +40,20 @@
 
 # Error Code Definition
 
+|Code Range|Description|
+|:--:|:--|
+|0x00|Success|
+|0x20-0x3F|Protocol Error|
+|0x40-0x5F|Procedure Call Error|
+|0x80-0xFF|Application Defined Error|
+|other|(reserved)|
+
 |Mnemonic|Code|Description|
 |:--|:--:|:--|
-|`ERR_BAD_SYNTAX`|0x1|command line syntax error|
-|`ERR_CMD_NOT_FOUND`|0x2|command not found|
-|`ERR_BAD_ARG_FORMAT`|0x41|bad argument|
-|(application defined)|0x80-0xFF|application defined error|
+|`SUCCESS`|0x00|Command Line Syntax Error|
+|`ERR_BAD_SYNTAX`|0x20|Command Line Syntax Error|
+|`ERR_CMD_NOT_FOUND`|0x40|Precedure Not Found|
+|`ERR_BAD_ARG_FORMAT`|0x41|Bad Argument|
 
 # System Commands
 
