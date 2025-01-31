@@ -50,10 +50,10 @@
 
 |Mnemonic|Code|Description|
 |:--|:--:|:--|
-|`SUCCESS`|0x00|Command Line Syntax Error|
-|`ERR_BAD_SYNTAX`|0x20|Command Line Syntax Error|
-|`ERR_CMD_NOT_FOUND`|0x40|Precedure Not Found|
-|`ERR_BAD_ARG_FORMAT`|0x41|Bad Argument|
+|`SUCCESS`|0x00|No Error|
+|`ERR_BAD_SYNTAX`|0x20|Generic Command Line Syntax Error|
+|`ERR_CMD_NOT_FOUND`|0x40|Command Not Found|
+|`ERR_BAD_ARG_FORMAT`|0x41|Generic Argument Error|
 
 # System Commands
 
