@@ -13,8 +13,8 @@
 
 |Type Name|Description|Format|
 |:--:|:--|:--|
-|i32|32bit signed integer|`-?(0\|[1-9][0-9]*)`<br>`0x[0-9a-fA-F_]+`<br>`0b[01_]+`|
-|f32|32bit floating point|`-?(0\|[1-9][0-9]*(\.[0-9]+)?([eE][0-9]+)?)`|
+|i64|64bit signed integer|`-?(0\|[1-9][0-9]*)`<br>`0x[0-9a-fA-F_]+`<br>`0b[01_]+`|
+|f64|64bit floating point|`-?(0\|[1-9][0-9]*(\.[0-9]+)?([eE][0-9]+)?)`|
 |bool|boolean|`false` or `true`|
 |str|string|Printable ASCII characters only<br>should be enclosed it in `"..."`<br>`\"`-->`"`, `\r`-->`CR`, `\n`-->`LF`, `\t`-->Tab|
 |void|void|`void`|
@@ -35,15 +35,16 @@
 
 1個のコマンドに対してデバイスは 1 個の応答を返す。
 
-- Success: `OK return_value`
-- Failed: `ERR code message`
+- Success: `OK 0 return_value`
+- Failed: `ERR status_code message`
 
-# Error Code Definition
+# Status Code Definition
 
 |Code Range|Description|
 |:--:|:--|
 |0x00|Success|
-|0x20-0x3F|Protocol Error|
+|0x20-0x2F|Local Protocol Error|
+|0x30-0x3F|Remote Protocol Error|
 |0x40-0x5F|Procedure Call Error|
 |0x80-0xFF|Application Defined Error|
 |other|(reserved)|
@@ -51,9 +52,13 @@
 |Mnemonic|Code|Description|
 |:--|:--:|:--|
 |`SUCCESS`|0x00|No Error|
-|`ERR_BAD_SYNTAX`|0x20|Generic Command Line Syntax Error|
-|`ERR_CMD_NOT_FOUND`|0x40|Command Not Found|
-|`ERR_BAD_ARG_FORMAT`|0x41|Generic Argument Error|
+|`ERR_CONNECTION_FAILED`|0x20|Connection Failed|
+|`ERR_RESPONSE_SYNTAX`|0x21|Response Syntax Error|
+|`ERR_UNEXPECTED_RESPONSE_TYPE`|0x22|Unexpected Response Type|
+|`ERR_COMMAND_SYNTAX`|0x30|Generic Command Line Syntax Error|
+|`ERR_CONNECTION_REFUSED`|0x30|Generic Command Line Syntax Error|
+|`ERR_COMMAND_NOT_FOUND`|0x40|Command Not Found|
+|`ERR_BAD_ARGUMENT`|0x41|Generic Argument Error|
 
 # System Commands
 
