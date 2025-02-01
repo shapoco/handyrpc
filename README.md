@@ -55,6 +55,8 @@
 |`ERR_CONNECTION_FAILED`|0x20|Connection Failed|
 |`ERR_RESPONSE_SYNTAX`|0x21|Response Syntax Error|
 |`ERR_UNEXPECTED_RESPONSE_TYPE`|0x22|Unexpected Response Type|
+|`ERR_RX_BUFFER_OVERFLOW`|0x23|RX Buffer Overflow|
+|`ERR_TX_BUFFER_OVERFLOW`|0x24|TX Buffer Overflow|
 |`ERR_COMMAND_SYNTAX`|0x30|Generic Command Line Syntax Error|
 |`ERR_CONNECTION_REFUSED`|0x30|Generic Command Line Syntax Error|
 |`ERR_COMMAND_NOT_FOUND`|0x40|Command Not Found|
